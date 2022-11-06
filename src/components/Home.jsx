@@ -47,18 +47,22 @@ const Home = () => {
           </ul>
         </div>
         <div className="mt-4 d-flex justify-content-between">
-          <a
-            href="https://github.com/Holytech/github_assignment"
-            className="card-link btn btn-outline-dark"
-          >
-            Hosted Link <i className="bi bi-link-45deg"></i>
-          </a>
-          <a
-            href="https://github.com/Holytech/github_assignment"
-            className="card-link btn btn-outline-dark"
-          >
-            View on Git <i className="bi bi-github"></i>
-          </a>
+          <div className="col-md-1">
+            <a
+              href="https://github-exam-project.netlify.app/"
+              className="card-link btn btn-outline-dark g-3"
+            >
+              Hosted Link <i className="bi bi-link-45deg"></i>
+            </a>
+          </div>
+          <div className="col-md-1">
+            <a
+              href="https://github.com/Holytech/github_assignment"
+              className="card-link btn btn-outline-dark"
+            >
+              View on Git <i className="bi bi-github"></i>
+            </a>
+          </div>
         </div>
       </div>
     </>
