@@ -45,11 +45,11 @@ const RepoDetails = () => {
             <li className="list-group-item">Visiblity : </li>
             <li className="list-group-item">Watchers : </li>
             <li className="list-group-item">Default branch : </li>
-            <li className="list-group-item">
+            {/* <li className="list-group-item">
               <a href="#" className="card-link btn btn-success">
                 View on Git
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
