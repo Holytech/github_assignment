@@ -21,7 +21,7 @@ export class ErrorBoundary extends Component {
     if (this.state.hasError) {
       return (
         <div>
-          <div className="container mt-5 text-danger">
+          <div className="custom-error container text-danger">
             <h1>Oops! An error occured</h1>
           </div>
         </div>

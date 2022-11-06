@@ -12,7 +12,10 @@ const RepoDetails = () => {
           name="description"
           content="This page contains more details about each reposittories, you are brought to this page when you click more on a repo from the list of repos"
         />
-        <link rel="canonical" href="/repos/:id" />
+        <link
+          rel="canonical"
+          href="https://github-exam-project.netlify.app/repos/:id"
+        />
       </Helmet>
       <div className="container my-5">
         <div className="card w-100">
@@ -42,6 +45,11 @@ const RepoDetails = () => {
             <li className="list-group-item">Visiblity : </li>
             <li className="list-group-item">Watchers : </li>
             <li className="list-group-item">Default branch : </li>
+            <li className="list-group-item">
+              <a href="#" className="card-link btn btn-success">
+                View on Git
+              </a>
+            </li>
           </ul>
         </div>
       </div>
