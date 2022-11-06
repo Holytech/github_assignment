@@ -1,0 +1,5 @@
+https://github-exam-project.netlify.app/
+https://github-exam-project.netlify.app/about/
+https://github-exam-project.netlify.app/repos/
+https://github-exam-project.netlify.app/repos/
+https://github-exam-project.netlify.app/repos/:id
