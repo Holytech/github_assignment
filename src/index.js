@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { HelmetProvider } from "react-helmet-async";
+import RepoContextProvider from "./contexts/RepoContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,7 +12,9 @@ root.render(
     <BrowserRouter>
       <ErrorBoundary>
         <HelmetProvider>
-          <App />
+          <RepoContextProvider>
+            <App />
+          </RepoContextProvider>
         </HelmetProvider>
       </ErrorBoundary>
     </BrowserRouter>

@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { RepoContext } from "../contexts/RepoContext";
 import Loading from "./Loading";
-import useFetch from "./useFetch";
-
-// export const reposContext = React.createContext();
+// import useFetch from "./useFetch";
 
 const Repos = () => {
   const [page, setPage] = useState(1);
-  const { isLoading, error, data } = useFetch(
-    "https://api.github.com/users/Holytech/repos?per_page=100"
-  );
+
+  const { isLoading, error, repos } = useContext(RepoContext);
 
   if (isLoading) {
     return <Loading />;
@@ -25,7 +23,7 @@ const Repos = () => {
   }
 
   const PER_PAGE = 6;
-  const total = data?.length;
+  const total = repos?.length;
   const pages = Math.ceil(total / PER_PAGE);
   const skip = page * PER_PAGE - PER_PAGE;
 
@@ -45,7 +43,7 @@ const Repos = () => {
       <div className="container my-5">
         <h1 className="title fw-bolder mb-5">List Of Repos</h1>
         <div className="row">
-          {data?.slice(skip, skip + PER_PAGE).map((repo, index) => {
+          {repos?.slice(skip, skip + PER_PAGE).map((repo, index) => {
             return (
               <div className="col-md-4 mb-3">
                 <div className="card">
